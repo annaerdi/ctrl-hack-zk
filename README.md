@@ -104,6 +104,19 @@ The `contracts/package.json` file contains shorthand scripts for building, testi
 > - Install [`cargo contract`](https://github.com/paritytech/cargo-contract)
 > - Install [`substrate-contracts-node`](https://github.com/paritytech/substrate-contracts-node)
 
+<details>
+<summary><strong>Additional step for WSL Users</strong></summary>
+
+> Windows users might get a `'syntax error near unexpected token'` when trying to run the next part.
+> This error in the `build-all.sh` script is due to a line-ending issue. The script file uses Windows-style line endings 
+> (CRLF - Carriage Return Line Feed), whereas Linux systems expect Unix-style line endings (LF - Line Feed).
+>
+> You can fix it with using a tool like dos2unix to convert the line endings:
+> - `sudo apt-get install dos2unix`
+> - `dos2unix build-all.sh` (inside the `contracts/` directory)
+
+</details>
+
 ```bash
 # Build contracts and move artifacts to `contracts/deployments/{contract}/` folders
 pnpm run build
