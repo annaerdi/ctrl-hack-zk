@@ -39,10 +39,15 @@ Our approach leverages the blockchain to certify the identity verification proce
 - Mobile Phones
 - classical telco infrastructure
 
+### Flow chart
+
+TBA
+
+
 ## Design thinking process:
 
 1. **Week 1 Problemspace:**  Profound understanding of the biggest Challenges of a telco enterprise and Blockchains technologycals impact. 
-2. **Week 2 Solutoinspace:**  Outline the requirements for proximity-based blockchain certification. Implementation of a basic (QR-) code based smart contract to bridge two DIDs with minimal frontend. 
+2. **Week 2 Solutionspace:**  Outline the requirements for proximity-based blockchain certification. Implementation of a basic (QR-) code based smart contract to bridge two DIDs with minimal frontend. 
 
 
 ## Impact Assessment
