@@ -8,7 +8,7 @@ MisTTaken
 
 ## Project Overview
 
-**Title:** Project Bridgehead
+**Title:** Project Bridgehead - Blockchain Certification Prototype
 
 **Description:**  
 We introduce a secure, blockchain-based certification system for establishing communication bridges between users in close physical proximity. Our prototype uses a dynamic QR code exchange, like a digital handshake, to initiate smart contracts that validate user identity and permit communication.
@@ -27,54 +27,98 @@ The phone number is well known since several years, it is a well known phishing 
 ### Concept
 Our approach leverages the blockchain to certify the identity verification process, enhancing security by requiring users to be in close physical proximity to "bridge" their contacts or DIDs. The QR code serves as a user-friendly mechanism to initiate smart contracts and is designed to change frequently to prevent misuse and enhance security.
 
+### Flow chart
+![flow chart](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/4f2ce105-f639-4e7a-86fd-6a363afa3d4c)
+
+## Simplified Communication Bridging Flow
+
+1. **Initiation by User A**: User A presents a QR code to initiate a secure communication link.
+2. **Action by User B**: User B scans the QR code, signaling their intent to connect.
+3. **System Processing**: The system extracts and validates User A's phone number from the QR code.
+4. **Validation Outcome**:
+   - If valid, the system adds User A's phone number to User B's contacts, enabling them to interact.
+   - If invalid, the system notifies User B, and the process is terminated.
+
+### Proposed Additions
+
+- **Multi-Factor Authentication**: Add a step for additional security verification after phone number validation.
+- **User Consent**: Introduce explicit consent confirmation from both users before adding the phone number to contacts.
+- **Post-Connection Verification**: Implement periodic checks to ensure the ongoing validity of the phone number.
+- **Auditing**: Log all steps of the process, particularly validation and consent, on the blockchain for transparency.
+- **Alternative Methods**: Provide an alternative connection method such as manual entry or NFC in case of QR code scan issues.
+
+
+### Sequence diagramm
+![architecture2](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/362590da-3f3e-4708-bcbc-40cffa22dc0f)
+
+## Simplified Sequence for Communication Bridging
+
+1. **QR Code Display**: User A displays a QR code, which contains their phone number encrypted for security.
+2. **QR Code Scan**: User B scans this QR code using their device.
+3. **Number Extraction**: The system extracts the phone number from the scanned QR code data.
+4. **Number Validation**: The system validates User A's phone number using blockchain verification.
+5. **Interaction Decision**:
+   - **Valid Number**: The system adds User A's phone number to User B's contacts and enables interaction.
+   - **Invalid Number**: The system notifies User B of the invalid number and ends the process without establishing a connection.
+
+### Additional Details for Sequence Diagram
+
+- **Validation Process**: The blockchain verification step confirms the authenticity of User A's phone number through smart contract validation.
+- **Contact Addition**: Upon successful validation, a smart contract triggers the addition of User A's contact to User B's device.
+- **Feedback to Users**: Both users receive system feedback—User A is informed that their number has been shared, and User B is notified that they can now communicate with User A.
+- **Error Handling**: In case of an invalid number, an error message is displayed to User B, and the contact is not added.
+
+
 ### Key Features
 1. **Blockchain for Certification:** Utilizing blockchain to record and certify the two users digital communication bridging. (main idea)
 2. **Dynamic QR Code Exchange:** Providing a secure, frequently changing QR code that requires physical presence, preventing remote attacks. (planned for next iterations)
 3. **Smart Contract Initiation:** The QR code acts as a trigger for the smart contract, ensuring a secure and automated certification process. (partial implementation as a MVP)
 4. **Proximity Verification:** Leveraging technology similar to Bluetooth to confirm the physical proximity of the parties involved in the bridging process. (planned for next iterations)
 
-### Technologies Used
-- Blockchain for secure certification ledger
-- Smart Contracts for automated identity verification
-- Mobile Phones
-- classical telco infrastructure
+## Technologies Used
 
-### Flow chart
+### Blockchain Technology
+- **Aleph Zero:** We're utilizing Aleph Zero's fast-paced network, renowned for its scalability and speed, which is critical for handling a high volume of transactions without performance degradation.
+- **Ink! Smart Contracts:** Our prototype uses Ink! smart contracts for their adaptability and security, allowing for an automated and trustless certification process between parties.
 
-TBA
+### Additional Technologies
+- **Mobile Phones:** Serving as the primary interface for users to interact with the blockchain via QR codes and potentially, in the future, proximity detection.
+- **Classical Telco Infrastructure:** The existing telecommunication infrastructure will be used for actual voice and data transmission once the secure bridge has been established through our blockchain system.
 
 
-## Design thinking process:
+## Design Thinking Process:
 
-1. **Week 1 Problemspace:**  Profound understanding of the biggest Challenges of a telco enterprise and Blockchains technologycals impact. 
-2. **Week 2 Solutionspace:**  Outline the requirements for proximity-based blockchain certification. Implementation of a basic (QR-) code based smart contract to bridge two DIDs with minimal frontend. 
+1. **Week 1 - Problem Space**: We delved into the complex challenges faced by telecom enterprises, assessing how blockchain technology could bring value beyond logistics and infrastructure certification. Despite numerous potential use cases, we pinpointed the security framework of the core business as the most critical area for innovation, leading to our decision to transform it.
+
+2. **Week 2 - Solution Space**: Determining the prototype's focus proved challenging, given the extensive range of features needed to advance the telecom industry. After considerable deliberation, we chose to develop a foundational smart contract that would exemplify our capability to harness blockchain technology. We opted for a minimalist implementation of the Bridging smart contract, laying the groundwork for a comprehensive and evolutionary step forward for the industry.
 
 
 ## Impact Assessment
 
-Our blockchain certification prototype will:
-- Enhance security by ensuring physical proximity during user bridging.
-- Reduce the risk of remote spoofing and phishing attacks.
-- Offer a decentralized and transparent process for establishing secure communications.
+Our blockchain certification prototype is designed to:
+- Ensure physical proximity during user bridging for enhanced security.
+- Reduce the incidence of remote spoofing and phishing attacks.
+- Provide a decentralized and transparent certification process for secure communications.
+
 
 ## Limitations of the Prototype
 
-- **User Behavior Change:** Requires users to adapt to new behaviors, such as scanning QR codes for each communication bridge.
-- **Dynamic QR Code Management:** Frequent changes in QR codes can introduce complexity and require a robust back-end system.
-- **Proximity Detection Reliability:** Ensuring the reliability of proximity detection in various environments and device conditions.
-- **Blockchain Scalability:** Handling a high frequency of bridging requests on the blockchain without compromising performance.
-- **Integration with Current Systems:** Compatibility with existing telecom infrastructure and user devices.
-- **User Privacy Concerns:** Managing the balance between proximity verification and user privacy.
+- **User Behavior Change:** The new system will require users to adopt new behaviors, such as scanning QR codes for each communication bridge.
+- **Dynamic QR Code Management:** Managing the frequent updates of QR codes can introduce back-end complexity.
+- **Proximity Detection Reliability:** Future implementations must ensure reliable proximity detection across varied environments.
+- **Blockchain Scalability:** The Aleph Zero network is chosen specifically for its scalability to handle the expected high frequency of bridging requests.
+- **Integration with Current Systems:** Our prototype must be compatible with existing telecom infrastructure and user devices.
+- **User Privacy Concerns:** It is imperative to balance proximity verification with the preservation of user privacy.
 
 ## Future Work and Development
 
-- **Improving QR Code User Interface:** Creating a seamless experience for initiating the smart contract through QR codes.
-- **Enhancing Proximity Detection:** Increasing the accuracy and reliability of the technology used for verifying physical proximity.
-- **Scalability Solutions:** Researching blockchain scaling solutions to handle mass adoption without compromising speed or security.
-- **Privacy-Preserving Techniques:** Developing methods to verify proximity while protecting user privacy.
+- **Improving QR Code User Interface:** We plan to create a more seamless experience for users initiating the smart contract through QR codes.
+- **Enhancing Proximity Detection:** We will work on increasing the accuracy and reliability of proximity detection technologies.
+- **Exploring Scalability Solutions:** Continuing research into blockchain scalability solutions to accommodate mass adoption.
+- **Developing Privacy-Preserving Techniques:** We are committed to developing techniques that will verify proximity while safeguarding user privacy.
 
 
 ## Conclusion
 
-Project Bridgehead marks a pivotal step towards revolutionizing telecommunications security. By adopting a pessimistic security approach, we can greatly reduce vulnerabilities and set a new standard in telecom security.
+Project Bridgehead is at the forefront of a new era in telecommunications security. By leveraging a pessimistic security approach with the latest blockchain technology, we aim to significantly reduce vulnerabilities and set a new benchmark for secure communication in the telecom industry.
 
