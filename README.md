@@ -122,3 +122,8 @@ Our blockchain certification prototype is designed to:
 
 Project Bridgehead is at the forefront of a new era in telecommunications security. By leveraging a pessimistic security approach with the latest blockchain technology, we aim to significantly reduce vulnerabilities and set a new benchmark for secure communication in the telecom industry.
 
+
+
+![DALL·E 2024-01-29 20 52 59 - Create a minimalistic banner with a bridge design, using a sky blue color palette  The style should be simple and non-fractal, emphasizing cleanliness](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/9186743b-4b2b-49c1-85c5-a415a1e16805)
+
+Dalle generated Banner: create a banner focusing on a bridge with a sky blue coloring. make sure its not fractal style and rather minimalistic
