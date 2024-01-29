@@ -19,30 +19,31 @@ In the current telecommunication environment, the use of outdated public phone n
 
 ![image](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/feaec1b8-0f7f-47e5-bb08-1549290cd021)
 
-The phone number is well known since several years, when looked up in the internet. It is a well known phishing number blacked out.
+This is a real screenshot from my phone. Translated it reads: "Potential scam". This indicates an optimistic security approach which is the industry norm.
+The phone number is well known since several years, it is a well known phishing number.
 
 ## Solution Approach
 
 ### Concept
-Our approach leverages the blockchain to certify the identity verification process, enhancing security by requiring users to be in close physical proximity. The QR code serves as a user-friendly mechanism to initiate smart contracts and is designed to change frequently to prevent misuse and enhance security.
+Our approach leverages the blockchain to certify the identity verification process, enhancing security by requiring users to be in close physical proximity to "bridge" their contacts or DIDs. The QR code serves as a user-friendly mechanism to initiate smart contracts and is designed to change frequently to prevent misuse and enhance security.
 
 ### Key Features
-1. **Blockchain for Certification:** Utilizing blockchain to record and certify the two users digital communication bridging.
-2. **Dynamic QR Code Exchange:** Providing a secure, frequently changing QR code that requires physical presence, preventing remote attacks.
-3. **Smart Contract Initiation:** The QR code acts as a trigger for the smart contract, ensuring a secure and automated certification process.
-4. **Proximity Verification:** Leveraging technology similar to Bluetooth to confirm the physical proximity of the parties involved in the bridging process.
+1. **Blockchain for Certification:** Utilizing blockchain to record and certify the two users digital communication bridging. (main idea)
+2. **Dynamic QR Code Exchange:** Providing a secure, frequently changing QR code that requires physical presence, preventing remote attacks. (planned for next iterations)
+3. **Smart Contract Initiation:** The QR code acts as a trigger for the smart contract, ensuring a secure and automated certification process. (partial implementation as a MVP)
+4. **Proximity Verification:** Leveraging technology similar to Bluetooth to confirm the physical proximity of the parties involved in the bridging process. (planned for next iterations)
 
 ### Technologies Used
 - Blockchain for secure certification ledger
 - Smart Contracts for automated identity verification
-- Proximity detection technologies to enforce user presence
+- Mobile Phones
+- classical telco infrastructure
 
-## Implementation Plan
+## Design thinking process:
 
-1. **Phase 1:** Outline the requirements for proximity-based blockchain certification.
-2. **Phase 2:** Develop the dynamic QR code generation and scanning mechanism.
-3. **Phase 3:** Integrate proximity detection technology to enforce physical presence during the bridging process.
-4. **Final Phase:** Conduct thorough testing of the security and usability of the prototype and prepare documentation for scaling the solution.
+1. **Week 1 Problemspace:**  Profound understanding of the biggest Challenges of a telco enterprise and Blockchains technologycals impact. 
+2. **Week 2 Solutoinspace:**  Outline the requirements for proximity-based blockchain certification. Implementation of a basic (QR-) code based smart contract to bridge two DIDs with minimal frontend. 
+
 
 ## Impact Assessment
 
