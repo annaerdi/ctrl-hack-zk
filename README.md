@@ -88,9 +88,9 @@ Our approach leverages the blockchain to certify the identity verification proce
 
 ## Design Thinking Process:
 
-1. **Week 1 - Problem Space**: We delved into the complex challenges faced by telecom enterprises, assessing how blockchain technology could bring value beyond logistics and infrastructure certification. Despite numerous potential use cases, we pinpointed the security framework of the core business as the most critical area for innovation, leading to our decision to transform it.
+1. **Week 1 - Problem Space**: We thoroughly analyzed the main problems telecom companies face and how blockchain could add value. We decided the most important area to focus on was improving the core security of the business.
 
-2. **Week 2 - Solution Space**: Determining the prototype's focus proved challenging, given the extensive range of features needed to advance the telecom industry. After considerable deliberation, we chose to develop a foundational smart contract that would exemplify our capability to harness blockchain technology. We opted for a minimalist implementation of the Bridging smart contract, laying the groundwork for a comprehensive and evolutionary step forward for the industry.
+2. **Week 2 - Solution Space**: It was difficult to choose which part of the prototype to develop first. There are many necessary features to take a significant step forward in the telecom industry. In the end, we chose to create a simple version of the smart contract for bridging two Digital IDs, which demonstrates our use of blockchain technology effectively.
 
 
 ## Impact Assessment
