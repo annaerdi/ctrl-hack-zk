@@ -122,3 +122,12 @@ Our blockchain certification prototype is designed to:
 
 Project Bridgehead is at the forefront of a new era in telecommunications security. By leveraging a pessimistic security approach with the latest blockchain technology, we aim to significantly reduce vulnerabilities and set a new benchmark for secure communication in the telecom industry.
 
+## Dalle generated art
+
+![bridgehead-logo](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/b5b7d242-9fdc-4481-b008-41fa80081e05)
+
+Create a futuristic and sleek logo for 'Project Bridgehead'. The logo should incorporate a digital handshake, blockchain elements, and a stylized bridge. The design must be modern, tech-oriented, and convey security, innovation, and connectivity. The color scheme should include bold and professional shades of blue, black, and silver, along with lila, representing secure and verified communication bridges between users in close proximity. The bridge element should be seamlessly integrated, symbolizing the bridging of communication. The logo should be suited for a blockchain-based communication project.
+
+![DALL·E 2024-01-29 20 52 59 - Create a minimalistic banner with a bridge design, using a sky blue color palette  The style should be simple and non-fractal, emphasizing cleanliness](https://github.com/annaerdi/ctrl-hack-zk/assets/26500470/9186743b-4b2b-49c1-85c5-a415a1e16805)
+
+Dalle: Create a minimalistic banner with a bridge design, using a sky blue color palette. The style should be simple and non-fractal, emphasizing cleanliness and clarity in the composition.
