@@ -1,12 +1,12 @@
 {
   "source": {
-    "hash": "0x594f6192f714665ea04eddc473def48dd71497034b89ea617ff97a44a1aa84e2",
+    "hash": "0x3b65fb418eb931856c11c717625b7102b7b87902830a74b2a7bf3857c25aacdf",
     "language": "ink! 4.3.0",
-    "compiler": "rustc 1.72.1",
+    "compiler": "rustc 1.74.1",
     "build_info": {
       "build_mode": "Release",
       "cargo_contract_version": "3.2.0",
-      "rust_toolchain": "stable-aarch64-apple-darwin",
+      "rust_toolchain": "stable-x86_64-unknown-linux-gnu",
       "wasm_opt_settings": {
         "keep_debug_symbols": false,
         "optimization_passes": "Z"
@@ -14,30 +14,18 @@
     }
   },
   "contract": {
-    "name": "greeter",
-    "version": "0.0.1",
+    "name": "bridgehead",
+    "version": "0.1.0",
     "authors": [
-      "Scio Labs <hello@scio.xyz>"
+      "[your_name] <[your_email]>"
     ]
   },
   "spec": {
     "constructors": [
       {
-        "args": [
-          {
-            "label": "init_value",
-            "type": {
-              "displayName": [
-                "String"
-              ],
-              "type": 0
-            }
-          }
-        ],
+        "args": [],
         "default": false,
-        "docs": [
-          "Creates a new greeter contract initialized with the given value."
-        ],
+        "docs": [],
         "label": "new",
         "payable": false,
         "returnType": {
@@ -45,26 +33,9 @@
             "ink_primitives",
             "ConstructorResult"
           ],
-          "type": 1
+          "type": 4
         },
         "selector": "0x9bae9d5e"
-      },
-      {
-        "args": [],
-        "default": false,
-        "docs": [
-          "Creates a new greeter contract initialized to 'Hello ink!'."
-        ],
-        "label": "default",
-        "payable": false,
-        "returnType": {
-          "displayName": [
-            "ink_primitives",
-            "ConstructorResult"
-          ],
-          "type": 1
-        },
-        "selector": "0xed4b9d1b"
       }
     ],
     "docs": [],
@@ -73,86 +44,76 @@
         "displayName": [
           "AccountId"
         ],
-        "type": 6
+        "type": 1
       },
       "balance": {
         "displayName": [
           "Balance"
         ],
-        "type": 9
+        "type": 8
       },
       "blockNumber": {
         "displayName": [
           "BlockNumber"
         ],
-        "type": 12
+        "type": 11
       },
       "chainExtension": {
         "displayName": [
           "ChainExtension"
         ],
-        "type": 13
+        "type": 12
       },
       "hash": {
         "displayName": [
           "Hash"
         ],
-        "type": 10
+        "type": 9
       },
       "maxEventTopics": 4,
       "timestamp": {
         "displayName": [
           "Timestamp"
         ],
-        "type": 11
+        "type": 10
       }
     },
-    "events": [
-      {
-        "args": [
-          {
-            "docs": [],
-            "indexed": false,
-            "label": "from",
-            "type": {
-              "displayName": [
-                "Option"
-              ],
-              "type": 5
-            }
-          },
-          {
-            "docs": [],
-            "indexed": false,
-            "label": "message",
-            "type": {
-              "displayName": [
-                "String"
-              ],
-              "type": 0
-            }
-          }
-        ],
-        "docs": [],
-        "label": "Greeted"
-      }
-    ],
+    "events": [],
     "lang_error": {
       "displayName": [
         "ink",
         "LangError"
       ],
-      "type": 3
+      "type": 6
     },
     "messages": [
       {
-        "args": [],
+        "args": [
+          {
+            "label": "account",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 1
+            }
+          },
+          {
+            "label": "contact",
+            "type": {
+              "displayName": [
+                "AccountId"
+              ],
+              "type": 1
+            }
+          }
+        ],
         "default": false,
         "docs": [
-          " Returns the current value of `message`."
+          " Let a user add new contact to their contact list"
         ],
-        "label": "greet",
-        "mutates": false,
+        "label": "add_contact",
+        "mutates": true,
         "payable": false,
         "returnType": {
           "displayName": [
@@ -161,35 +122,35 @@
           ],
           "type": 4
         },
-        "selector": "0x052cda08"
+        "selector": "0x514d0e8a"
       },
       {
         "args": [
           {
-            "label": "new_value",
+            "label": "account",
             "type": {
               "displayName": [
-                "String"
+                "AccountId"
               ],
-              "type": 0
+              "type": 1
             }
           }
         ],
         "default": false,
         "docs": [
-          " Sets `message` to the given value."
+          " Get the list of contacts of a user"
         ],
-        "label": "set_message",
-        "mutates": true,
+        "label": "get_contacts",
+        "mutates": false,
         "payable": false,
         "returnType": {
           "displayName": [
             "ink",
             "MessageResult"
           ],
-          "type": 1
+          "type": 7
         },
-        "selector": "0x1fe7426f"
+        "selector": "0x5a0345be"
       }
     ]
   },
@@ -200,15 +161,20 @@
           "fields": [
             {
               "layout": {
-                "leaf": {
-                  "key": "0x00000000",
-                  "ty": 0
+                "root": {
+                  "layout": {
+                    "leaf": {
+                      "key": "0x582edceb",
+                      "ty": 0
+                    }
+                  },
+                  "root_key": "0x582edceb"
                 }
               },
-              "name": "message"
+              "name": "contacts"
             }
           ],
-          "name": "Greeter"
+          "name": "PhoneBook"
         }
       },
       "root_key": "0x00000000"
@@ -219,7 +185,9 @@
       "id": 0,
       "type": {
         "def": {
-          "primitive": "str"
+          "sequence": {
+            "type": 1
+          }
         }
       }
     },
@@ -227,12 +195,51 @@
       "id": 1,
       "type": {
         "def": {
+          "composite": {
+            "fields": [
+              {
+                "type": 2,
+                "typeName": "[u8; 32]"
+              }
+            ]
+          }
+        },
+        "path": [
+          "ink_primitives",
+          "types",
+          "AccountId"
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "type": {
+        "def": {
+          "array": {
+            "len": 32,
+            "type": 3
+          }
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": {
+        "def": {
+          "primitive": "u8"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": {
+        "def": {
           "variant": {
             "variants": [
               {
                 "fields": [
                   {
-                    "type": 2
+                    "type": 5
                   }
                 ],
                 "index": 0,
@@ -241,7 +248,7 @@
               {
                 "fields": [
                   {
-                    "type": 3
+                    "type": 6
                   }
                 ],
                 "index": 1,
@@ -253,11 +260,11 @@
         "params": [
           {
             "name": "T",
-            "type": 2
+            "type": 5
           },
           {
             "name": "E",
-            "type": 3
+            "type": 6
           }
         ],
         "path": [
@@ -266,7 +273,7 @@
       }
     },
     {
-      "id": 2,
+      "id": 5,
       "type": {
         "def": {
           "tuple": []
@@ -274,7 +281,7 @@
       }
     },
     {
-      "id": 3,
+      "id": 6,
       "type": {
         "def": {
           "variant": {
@@ -293,7 +300,7 @@
       }
     },
     {
-      "id": 4,
+      "id": 7,
       "type": {
         "def": {
           "variant": {
@@ -310,7 +317,7 @@
               {
                 "fields": [
                   {
-                    "type": 3
+                    "type": 6
                   }
                 ],
                 "index": 1,
@@ -326,7 +333,7 @@
           },
           {
             "name": "E",
-            "type": 3
+            "type": 6
           }
         ],
         "path": [
@@ -335,79 +342,7 @@
       }
     },
     {
-      "id": 5,
-      "type": {
-        "def": {
-          "variant": {
-            "variants": [
-              {
-                "index": 0,
-                "name": "None"
-              },
-              {
-                "fields": [
-                  {
-                    "type": 6
-                  }
-                ],
-                "index": 1,
-                "name": "Some"
-              }
-            ]
-          }
-        },
-        "params": [
-          {
-            "name": "T",
-            "type": 6
-          }
-        ],
-        "path": [
-          "Option"
-        ]
-      }
-    },
-    {
-      "id": 6,
-      "type": {
-        "def": {
-          "composite": {
-            "fields": [
-              {
-                "type": 7,
-                "typeName": "[u8; 32]"
-              }
-            ]
-          }
-        },
-        "path": [
-          "ink_primitives",
-          "types",
-          "AccountId"
-        ]
-      }
-    },
-    {
-      "id": 7,
-      "type": {
-        "def": {
-          "array": {
-            "len": 32,
-            "type": 8
-          }
-        }
-      }
-    },
-    {
       "id": 8,
-      "type": {
-        "def": {
-          "primitive": "u8"
-        }
-      }
-    },
-    {
-      "id": 9,
       "type": {
         "def": {
           "primitive": "u128"
@@ -415,13 +350,13 @@
       }
     },
     {
-      "id": 10,
+      "id": 9,
       "type": {
         "def": {
           "composite": {
             "fields": [
               {
-                "type": 7,
+                "type": 2,
                 "typeName": "[u8; 32]"
               }
             ]
@@ -435,7 +370,7 @@
       }
     },
     {
-      "id": 11,
+      "id": 10,
       "type": {
         "def": {
           "primitive": "u64"
@@ -443,7 +378,7 @@
       }
     },
     {
-      "id": 12,
+      "id": 11,
       "type": {
         "def": {
           "primitive": "u32"
@@ -451,7 +386,7 @@
       }
     },
     {
-      "id": 13,
+      "id": 12,
       "type": {
         "def": {
           "variant": {}
